@@ -1,0 +1,7 @@
+{
+    "projectName": "ContractProject",
+    "namespace": "ContractProject.Contracts",
+    "lang": 0,
+    "autoCodeGen": true,
+    "projectPath": "../"
+}
