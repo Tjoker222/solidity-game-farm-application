@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "word",
+						"type": "string"
+					}
+				],
+				"name": "newWord",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "exist",
+						"type": "bool"
+					}
+				],
+				"name": "wordExist",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "Words",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "_addWord",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_word",
+						"type": "string"
+					}
+				],
+				"name": "_verifyWord",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts\\contract.sol": "HelloBlockchain"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts\\contract.sol": {
+			"keccak256": "0x518e49a580ba75470be0f02cc0c4996eb651e25affa74091d149f98490e551b0",
+			"urls": [
+				"bzz-raw://48e5fc6c055ae996a7e38f6973607adbfe48a1bc20c6fb3b1700822324560867",
+				"dweb:/ipfs/QmNcX1Z3L8kHymzp2oduMjcHPm9L7DVdwZT6mkNEgFvx7E"
+			]
+		}
+	},
+	"version": 1
+}

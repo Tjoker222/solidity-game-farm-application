@@ -1,4 +1,4 @@
-pragma solidity ^0.7.0;
+pragma solidity ^0.8.6;
 
 contract HelloBlockchain {
 
@@ -18,9 +18,8 @@ contract HelloBlockchain {
 
     }
 
-    function _verifyWord(string memory _word) public returns(bool){
+    function _verifyWord(string memory _word) public view returns(bool){
 
-        emit wordExist(Words[_word]);
         return Words[_word];
     }
 
