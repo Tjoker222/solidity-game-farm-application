@@ -4,7 +4,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npm run build && node build/server.js",
+    "start:dev": "nodemon",
+    "build": "rimraf ./build && tsc"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,13 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.15",
     "web3": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
   }
 }
