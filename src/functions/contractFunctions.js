@@ -1,5 +1,5 @@
 const Web3 = require("web3")
-const contract = require('../artifacts/HelloBlockchain.json')
+const contract = require('../../artifacts/HelloBlockchain.json')
 
 
 class ContractFunction{
