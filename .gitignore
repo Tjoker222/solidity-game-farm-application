@@ -24,3 +24,4 @@ lerna-debug.log
 #binare
 build/
 src/artifacts
+bin/
