@@ -23,4 +23,8 @@ contract HelloBlockchain {
         return Words[_word];
     }
 
+    function _showAll() public view returns(string[] memory){
+        return word;
+    }
+
 }

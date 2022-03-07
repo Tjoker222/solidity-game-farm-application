@@ -64,6 +64,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "_showAll",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -111,10 +124,10 @@
 	},
 	"sources": {
 		"contracts\\contract.sol": {
-			"keccak256": "0x518e49a580ba75470be0f02cc0c4996eb651e25affa74091d149f98490e551b0",
+			"keccak256": "0xb943ed981a81ee8b688fa4d6bc18fb6da3eb897d06e0d0ba1d33759a7379a8b9",
 			"urls": [
-				"bzz-raw://48e5fc6c055ae996a7e38f6973607adbfe48a1bc20c6fb3b1700822324560867",
-				"dweb:/ipfs/QmNcX1Z3L8kHymzp2oduMjcHPm9L7DVdwZT6mkNEgFvx7E"
+				"bzz-raw://6c093e928de802d393d614cde46f0c399185c840db9c73cd4876fa6000f82660",
+				"dweb:/ipfs/QmXKwb5utcJQBUehd5LwDBmZVyffM9B8ymcv6b7PKH9AoE"
 			]
 		}
 	},

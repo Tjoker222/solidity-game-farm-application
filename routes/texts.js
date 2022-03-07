@@ -2,24 +2,30 @@ const express = require("express")
 const router = express.Router()
 const path = require("path")
 
-const Web3 = require("web3")
-const web3 = new Web3('HTTP://127.0.0.1:7545');
-const contract = require('../artifacts/HelloBlockchain.json')
+const contractFunction = require('../functions/contractFunctions')
 
-const HelloBlockChainContract = new web3.eth.Contract(contract.abi, '0xBe616Dfb05BB5769FADf7041b4fb1771BA34B4fD')
+const helloBlockchainFunction = new contractFunction('0x3D26993b777B161bB5d4796536c66081b536533b','HTTP://127.0.0.1:7545' )
 
-
-
+helloBlockchainFunction.conection()
 
 router.get("/", async (req,res)=>{
-    console.log(await HelloBlockChainContract.methods._verifyWord("ok").call());
-
+    console.log(await helloBlockchainFunction.showAll())
     res.sendFile(path.join(__dirname, '../','homepage','home.html'))
 })
 
 router.post('/add', async (req,res)=>{
 
-    res.json({message: req.body.message})
+    const isValid = await helloBlockchainFunction.verifyWord(req.body.message)
+
+    if(!isValid)
+    {
+        helloBlockchainFunction.addWord(req.body.message);
+        res.send(`${req.body.message} registrado!`)
+    }
+    else{
+        res.send(`${req.body.message} já existe!`)
+    }
+    
 })
 
 module.exports = router
