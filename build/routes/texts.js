@@ -35,8 +35,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var express = require("express");
-var router = express.Router();
+var express2 = require("express");
+var router = express2.Router();
 var path = require("path");
 var contractFunction = require('../functions/contractFunctions');
 var helloBlockchainFunction = new contractFunction('0x3D26993b777B161bB5d4796536c66081b536533b', 'HTTP://127.0.0.1:7545');

@@ -4,9 +4,13 @@ const contract = require('../../artifacts/HelloBlockchain.json')
 
 class ContractFunction{
 
+    address: string
+    network: string
+    HelloBlockChainContract: any
+
     constructor(
-        address,
-        network
+        address: string,
+        network: string
     ){
         this.address = address;
         this.network = network;
@@ -17,12 +21,12 @@ class ContractFunction{
         this.HelloBlockChainContract = new web3.eth.Contract(contract.abi, this.address);
     }
 
-    verifyWord(word){
+    verifyWord(word: string){
         const result = this.HelloBlockChainContract.methods._verifyWord(word).call()
         return result
     }
 
-    addWord(word){
+    addWord(word : string){
         this.HelloBlockChainContract.methods._addWord(word).send({from: '0x085778a92dd2e4cdad12e861095e1c9d9a9faf14'}, ()=>{
             console.log('registrado')
         })
